@@ -39,4 +39,16 @@ describe('orders API', () => {
   it('returns 404 for an unknown order', async () => {
     expect((await fetch(`${url}/orders/999`)).status).toBe(404);
   });
+
+  it('deletes an order and returns 204', async () => {
+    const created = await post({ items: [{ sku: 'SKU-2', unitPrice: 10, quantity: 1 }] });
+    const { id } = await created.json();
+
+    expect((await fetch(`${url}/orders/${id}`, { method: 'DELETE' })).status).toBe(204);
+    expect((await fetch(`${url}/orders/${id}`)).status).toBe(404);
+  });
+
+  it('returns 404 when deleting a non-existent order', async () => {
+    expect((await fetch(`${url}/orders/999`, { method: 'DELETE' })).status).toBe(404);
+  });
 });

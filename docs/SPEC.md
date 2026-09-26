@@ -18,6 +18,7 @@ unless the spec is changed first.
 - `POST /orders` creates an order from a non-empty list of line items and returns it with its
   computed total (201). Invalid input returns 400.
 - `GET /orders/:id` returns one order, or 404 if it does not exist.
+- `DELETE /orders/:id` removes an order and returns 204, or 404 if it does not exist.
 - Every endpoint is described in `openapi.yaml` and covered by a test in `test/`.
 
 ## Config
