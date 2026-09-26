@@ -23,5 +23,5 @@ unless the spec is changed first.
 ## Config
 
 - The service is configured only through environment variables, documented in `README.md`.
-- `DB_URL` (required): connection string of the orders database.
+- `DATABASE_URL` (required): connection string of the orders database.
 - `PORT` (optional, default 3000): HTTP port.

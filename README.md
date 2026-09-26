@@ -7,7 +7,7 @@ Business rules live in [docs/SPEC.md](docs/SPEC.md), the HTTP contract in [opena
 
 ```bash
 pnpm install
-DB_URL=postgres://localhost:5432/orders pnpm start
+DATABASE_URL=postgres://localhost:5432/orders pnpm start
 pnpm test
 ```
 
@@ -15,5 +15,5 @@ pnpm test
 
 | Variable | Required | Default | Description |
 |---|---|---|---|
-| `DB_URL` | yes | — | Connection string of the orders database |
+| `DATABASE_URL` | yes | — | Connection string of the orders database |
 | `PORT` | no | `3000` | HTTP port |
