@@ -34,5 +34,13 @@ export function ordersRouter(store: OrderStore): Router {
     res.json(order);
   });
 
+  router.delete('/orders/:id', (req, res) => {
+    if (!store.delete(req.params.id)) {
+      res.status(404).json({ error: 'order not found' });
+      return;
+    }
+    res.status(204).end();
+  });
+
   return router;
 }
