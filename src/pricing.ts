@@ -5,7 +5,7 @@ export interface LineItem {
 }
 
 export const DISCOUNT_THRESHOLD = 100;
-export const DISCOUNT_RATE = 0.1;
+export const DISCOUNT_RATE = 0.15;
 
 const round = (n: number): number => Math.round(n * 100) / 100;
 
