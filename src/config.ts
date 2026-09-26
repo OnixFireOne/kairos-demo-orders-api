@@ -5,7 +5,7 @@ export interface Config {
 
 /** Reads the service configuration from the environment. */
 export function loadConfig(): Config {
-  const dbUrl = process.env.DB_URL;
-  if (!dbUrl) throw new Error('DB_URL is required');
+  const dbUrl = process.env.DATABASE_URL;
+  if (!dbUrl) throw new Error('DATABASE_URL is required');
   return { port: Number(process.env.PORT ?? 3000), dbUrl };
 }
