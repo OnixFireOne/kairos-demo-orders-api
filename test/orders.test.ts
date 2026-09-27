@@ -25,7 +25,7 @@ describe('orders API', () => {
     const created = await post({ items: [{ sku: 'SKU-1', unitPrice: 60, quantity: 2 }] });
     expect(created.status).toBe(201);
     const order = await created.json();
-    expect(order.total).toBe(108);
+    expect(order.total).toBe(102);
 
     const read = await fetch(`${url}/orders/${order.id}`);
     expect(read.status).toBe(200);

@@ -26,4 +26,8 @@ export class OrderStore {
   get(id: string): Order | undefined {
     return this.orders.get(id);
   }
+
+  delete(id: string): boolean {
+    return this.orders.delete(id);
+  }
 }

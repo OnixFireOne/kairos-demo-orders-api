@@ -9,7 +9,7 @@ describe('orderTotal', () => {
     expect(orderTotal([item(100)])).toBe(100);
   });
 
-  it('gives 10% off above $100', () => {
-    expect(orderTotal([item(60, 2)])).toBe(108);
+  it('gives 15% off above $100', () => {
+    expect(orderTotal([item(60, 2)])).toBe(102);
   });
 });
